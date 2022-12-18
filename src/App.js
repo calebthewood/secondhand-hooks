@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import useNumbersAPI from './useNumbersAPI';
 
 function App() {
+  let fact = useNumbersAPI({number: "1948", category: "year"})
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <p id="display">
+          {fact}
         </p>
         <a
           className="App-link"
