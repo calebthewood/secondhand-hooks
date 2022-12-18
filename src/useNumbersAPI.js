@@ -20,12 +20,12 @@ import { useState, useEffect } from "react";
  * */
 export default function useNumbersAPI({ number = "42", category = false,
   list = false, range = false, custom = false, }) {
-
+  // TODO: Add ability to say 'today', and JS gets date
   const [fact, setFact] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  /** Builds a parameter string using the options object */
+  /** Builds a parameter string from the options object */
   function parseOptions() {
     let paramString = "";
     if (range) {
@@ -70,7 +70,7 @@ export default function useNumbersAPI({ number = "42", category = false,
     return "Loading...";
   }
   if (error) {
-    return error;
+    return "Error...";
   }
   return fact;
 }

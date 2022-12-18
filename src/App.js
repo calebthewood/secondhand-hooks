@@ -3,7 +3,7 @@ import './App.css';
 import useNumbersAPI from './useNumbersAPI';
 
 function App() {
-  let fact = useNumbersAPI({number: "1948", category: "year"})
+  let fact = useNumbersAPI({number: "6", category: "math"})
 
   return (
     <div className="App">
